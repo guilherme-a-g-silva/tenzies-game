@@ -50,7 +50,7 @@ Key Features:
 ## 🛠 Future Improvements
 
 - Add a timer to track how fast the game is won.
-- Count the number of rolls.
+- Count the number of rolls. (DONE)
 
 ## 📷 Preview
 

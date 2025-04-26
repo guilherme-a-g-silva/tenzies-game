@@ -4,6 +4,7 @@ import { nanoid } from "nanoid"
 import Confetti from "react-confetti"
 
 export default function App() {
+    const [rollCounter, setRollCounter] = useState(() => 0)
     const [dice, setDice] = useState(() => generateAllNewDice())
     const buttonRef = useRef(null)
 
@@ -16,7 +17,11 @@ export default function App() {
         }
     }, [gameWon])
 
+    // Roll counter:
+    // Show Counter in screen
+
     function generateAllNewDice() {
+        setRollCounter(() => 0)
         return new Array(10)
             .fill(0)
             .map(() => ({
@@ -28,6 +33,7 @@ export default function App() {
     
     function rollDice() {
         if (!gameWon) {
+            setRollCounter(count => count + 1)
             setDice(oldDice => oldDice.map(die =>
                 die.isHeld ?
                     die :
@@ -37,6 +43,7 @@ export default function App() {
             setDice(generateAllNewDice())
         }
     }
+    console.log(rollCounter)
 
     function hold(id) {
         setDice(oldDice => oldDice.map(die =>
@@ -66,6 +73,7 @@ export default function App() {
             <div className="dice-container">
                 {diceElements}
             </div>
+            <h2 className="roll-counter">Rolls: {rollCounter}</h2>
             <button ref={buttonRef} className="roll-dice" onClick={rollDice}>
                 {gameWon ? "New Game" : "Roll"}
             </button>
