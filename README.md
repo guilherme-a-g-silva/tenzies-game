@@ -3,6 +3,7 @@
 ![License: Scrimba Project](https://img.shields.io/badge/license-Scrimba%20Project-blueviolet?style=for-the-badge)
 
 A simple and fun dice game built with **React**!
+Try it yourself
 
 ## 📜 About the Project
 
@@ -56,7 +57,7 @@ Key Features:
 
 ![Tenzies Game Screenshot](./tenzies-print.png)
 
----
+[![Play Tenzies](https://img.shields.io/badge/Play%20Now-Tenzies-brightgreen?style=for-the-badge)](https://tenzies-game-alpha-ashen.vercel.app/)
 
 # License
 
